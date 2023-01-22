@@ -31,7 +31,7 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           workload_identity_provider: projects/991876403952/locations/global/workloadIdentityPools/deploy-function/providers/github-deploy-function
-          service_account: cloud-function-deploy-375513@appspot.gserviceaccount.com
+          service_account: deploy-cloud-function@cloud-function-deploy-375513.iam.gserviceaccount.com
 
       - name: Set up Cloud SDK
         uses: google-github-actions/setup-gcloud@v0
