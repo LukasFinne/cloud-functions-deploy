@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df2822a-2eb0-4161-9896-c4ea65d92ea6" name="Changes" comment="Intial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/example/httpdeploy/Main.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="6df2822a-2eb0-4161-9896-c4ea65d92ea6" name="Changes" comment="Add HttpFunction">
+      <change beforePath="$PROJECT_DIR$/.github/workflows/httpdeploy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/httpdeploy.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/Main.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +18,37 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cloud-function-deploy" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cloud-function-deploy" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="cloud-function-deploy" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -59,7 +89,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674392101776</updated>
-      <workItem from="1674392102873" duration="1335000" />
+      <workItem from="1674392102873" duration="3997000" />
     </task>
     <task id="LOCAL-00001" summary="Intial commit">
       <created>1674392179458</created>
@@ -68,7 +98,21 @@
       <option name="project" value="LOCAL" />
       <updated>1674392179458</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add gradle dependencies">
+      <created>1674393455527</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1674393455527</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Add HttpFunction">
+      <created>1674393551929</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674393551929</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -76,6 +120,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Intial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Intial commit" />
+    <MESSAGE value="Add gradle dependencies" />
+    <MESSAGE value="Add HttpFunction" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add HttpFunction" />
   </component>
 </project>

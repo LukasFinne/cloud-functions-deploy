@@ -1,36 +1,54 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Deploy to master
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "master" branch
+  workflow_dispatch:
   push:
     branches: [ "master" ]
-  pull_request:
-    branches: [ "master" ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+permissions:
+  contents: read
+  id-token: write
+
+
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+      - name: Environment variables
+        uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: '0'
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v1
+        with:
+          workload_identity_provider: projects/991876403952/locations/global/workloadIdentityPools/deploy-function/providers/github-deploy-function
+          service_account: cloud-function-deploy-375513@appspot.gserviceaccount.com
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v0
+
+      - name: Build
+        run: ./gradlew :cloud-function-deploy:build
+
+      - name: Prep
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          mkdir deploy
+          cp cloud-function-deploy/build/libs/shadow-all.jar deploy/
+
+      - id: deploy-httpFunction
+        uses: google-github-actions/deploy-cloud-functions@v0
+        with:
+          name: httpFunction
+          runtime: java11
+          entry_point: com.example.httpdeploy.App
+          source_dir: deploy
+
