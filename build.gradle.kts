@@ -8,10 +8,9 @@ plugins {
     kotlin("plugin.serialization") version "1.8.0"
     id("com.github.johnrengelman.shadow") version "4.0.4"
     application
+    java
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()
@@ -23,7 +22,7 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.4.1")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0")
     implementation("com.google.cloud:google-cloudevent-types:0.3.0")
-
+    implementation("com.google.guava:guava:26.0-jre")
     implementation("io.github.microutils:kotlin-logging-jvm:3.0.4")
     implementation("org.slf4j:slf4j-api:2.0.6")
     implementation("org.slf4j:slf4j-simple:2.0.6")
@@ -43,14 +42,7 @@ dependencies {
 
 application {
     mainClass.set("com.example.httpdeploy.AppKt")
-}
-
-tasks.test {
-    useJUnitPlatform()
-}
-
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "11"
+    mainClassName = "com.example.httpdeploy.AppKt"
 }
 
 task<JavaExec>("runFunction") {
@@ -80,8 +72,13 @@ tasks {
 }
 
 
+tasks {
+    build {
+        dependsOn(shadowJar)
+    }
+}
 
 
-application {
-    mainClass.set("MainKt")
+tasks.withType<KotlinCompile> {
+    kotlinOptions.jvmTarget = "11"
 }
