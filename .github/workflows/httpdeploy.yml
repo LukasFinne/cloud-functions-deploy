@@ -37,7 +37,7 @@ jobs:
         uses: google-github-actions/setup-gcloud@v0
 
       - name: Build
-        run: ./gradlew :cloud-function-deploy:build
+        run: ./gradlew build
 
       - name: Prep
         run: |

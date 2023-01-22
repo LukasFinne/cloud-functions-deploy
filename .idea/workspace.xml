@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6df2822a-2eb0-4161-9896-c4ea65d92ea6" name="Changes" comment="Update github workflow to be able to deploy cloud function">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+    <list default="true" id="6df2822a-2eb0-4161-9896-c4ea65d92ea6" name="Changes" comment="Fix gradle build error">
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +116,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1674392101776</updated>
-      <workItem from="1674392102873" duration="4823000" />
+      <workItem from="1674392102873" duration="5179000" />
     </task>
     <task id="LOCAL-00001" summary="Intial commit">
       <created>1674392179458</created>
@@ -154,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1674397246934</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Fix gradle build error">
+      <created>1674398016596</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1674398016596</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -165,6 +171,7 @@
     <MESSAGE value="Add gradle dependencies" />
     <MESSAGE value="Add HttpFunction" />
     <MESSAGE value="Update github workflow to be able to deploy cloud function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update github workflow to be able to deploy cloud function" />
+    <MESSAGE value="Fix gradle build error" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix gradle build error" />
   </component>
 </project>
