@@ -47,7 +47,7 @@ jobs:
       - id: deploy-httpFunction
         uses: google-github-actions/deploy-cloud-functions@v0
         with:
-          name: httpFunction
+          name: httpFunctionGithub
           runtime: java11
           entry_point: com.example.httpdeploy.App
           source_dir: deploy
