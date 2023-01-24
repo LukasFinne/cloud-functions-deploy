@@ -42,7 +42,7 @@ jobs:
       - name: Prep
         run: |
           mkdir deploy
-          cp cloud-function-deploy/build/libs/shadow-all.jar deploy/
+          cp build/libs/shadow-all.jar deploy/
 
       - id: deploy-httpFunction
         uses: google-github-actions/deploy-cloud-functions@v0
